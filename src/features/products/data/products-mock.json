@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Gamer Pro",
+    "price": 24999,
+    "description": "Laptop de alto rendimiento con procesador Ryzen y GPU dedicada.",
+    "image": "https://picsum.photos/id/1/300/200",
+    "isOnSale": true,
+    "tags": ["gaming", "laptop", "electronics"]
+  },
+  {
+    "id": 2,
+    "name": "Monitor Ultrawide 34\"",
+    "price": 8999,
+    "description": "Monitor panorámico ideal para productividad y multitarea.",
+    "image": "https://picsum.photos/id/20/300/200",
+    "isOnSale": false,
+    "tags": ["monitor", "office", "electronics"]
+  },
+  {
+    "id": 3,
+    "name": "Teclado Mecánico RGB",
+    "price": 1499,
+    "description": "Teclado mecánico con iluminación RGB y switches táctiles.",
+    "image": "https://picsum.photos/id/48/300/200",
+    "isOnSale": true,
+    "tags": ["keyboard", "gaming", "accessories"]
+  },
+  {
+    "id": 4,
+    "name": "Mouse Inalámbrico Ergo",
+    "price": 799,
+    "description": "Mouse ergonómico inalámbrico para largas jornadas de trabajo.",
+    "image": "https://picsum.photos/id/96/300/200",
+    "isOnSale": false,
+    "tags": ["mouse", "office", "accessories"]
+  }
+]

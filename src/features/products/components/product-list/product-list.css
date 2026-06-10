@@ -1,0 +1,9 @@
+
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}

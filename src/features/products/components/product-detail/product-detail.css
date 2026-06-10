@@ -1,0 +1,36 @@
+
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    height: 650px;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+
+
+.detail-img-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;    
+}
+
+.detail-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.price,
+.promotion,
+.tags {
+    color: black;
+}
+
+
+.detail-content {
+    height: 50%;
+    color: rgb(145, 118, 170);
+}
