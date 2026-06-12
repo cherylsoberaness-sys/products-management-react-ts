@@ -21,7 +21,6 @@ const ProductsPage: React.FC = () => {
         let filteredProducts: Product[] = products
     
         if (filter.name) {
-            console.log(normalize(filter.name))
             filteredProducts = filteredProducts.filter((product: Product) => 
             normalize(product.name).includes(normalize(filter.name)) )
         }
@@ -29,7 +28,6 @@ const ProductsPage: React.FC = () => {
             filteredProducts = filteredProducts.filter((product: Product) => product.isOnSale)
         }
        
-    console.log('PRODUCTS PAGE LOADED');
     return (
     <Layout appTitle="Frieren's Library Management" subTitle="" menuOptions={getMenuOptions()}>
         <ProductsFilter/>

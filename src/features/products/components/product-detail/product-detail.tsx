@@ -12,25 +12,27 @@ const ProductDetailPage: React.FC = () => {
     
     const { product, notification } = useDetails(id!);
 
-    if (!product) {
-        return <p>Cargando...</p>;
-    }
     if (notification) {
         return <p>{notification}</p>
+    }
+    if (!product) {
+        return <p>Cargando...</p>;
     }
     
     return (
         <Layout appTitle="Detalles del producto" menuOptions={getMenuOptions()}>
             <div className="product-detail">
                 <div className="detail-img-container">
-                    <img src={product.image} alt={product.name}/>
+                    {product.image ? 
+                        (<img src={product.image} />) : 
+                        (<img alt={product.name} />)}
                 </div>
                 <div className="detail-content">
                     <h3>{product.name}</h3>
                     <h2 className="price">${product.price}</h2>
                     <p className="promotion">Promotion: {product.isOnSale? 'yes' : 'no'}</p>
                     <p className="description">{product.description}.</p>
-                    <p className="tags">{product.tags.map((tag) => `#${tag}, `)}</p>
+                    <p className="tags">{product.tags? product.tags.map(tag => `#${tag}`).join(' '): ''}</p>
                 </div>
 
             </div>

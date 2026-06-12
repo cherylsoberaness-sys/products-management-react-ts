@@ -9,7 +9,6 @@ type Props = {
 
 export const ProductsList: React.FC<Props> = ({ products }) => {
 
-
     return (
         <>
             <section>

@@ -15,7 +15,6 @@ export const useProducts = () => {
             try {
                 const products = await getProducts();
                 setProducts(products);
-                
             } catch (error) {
                 const notification = error instanceof Error ? error.message : 'No fue posible cargar los productos' 
                 setNotification(notification);

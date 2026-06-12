@@ -9,14 +9,19 @@ type Props = {
 export const ProductItem: React.FC<Props> = ({product}) => {
     return (
         <li className="product-item">
+            
             <div className="product-img-container">
-                <img src={product.image} alt=""/>
+                {product.image ? (
+                <img src={product.image} alt={product.name} />
+                ) : (
+                <img alt={product.name} />
+                )}
             </div>
             <div className="product-content">
                 <h3>{product.name}</h3>
                 <p>${product.price}</p>
                 <p>Promotion: {product.isOnSale? 'yes' : 'no'}</p>
-                <p>{product.tags.map((tag) => `#${tag}, `)}</p>
+                <p>{product.tags? product.tags.map(tag => `#${tag}`).join('') : ''}</p>
             </div>            
         </li>
     )

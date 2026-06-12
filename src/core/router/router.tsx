@@ -4,7 +4,7 @@ import ProtectedRoute from "./protected-route";
 
 const ProductsPage = React.lazy(() => import('@features/products/products-page'));
 const LoginPage = React.lazy(() => import('@features/auth/login-page'));
-const NewProductPage = React.lazy(() => import('@features/products/components/product-form/product-form'));
+const NewProductPage = React.lazy(() => import('@features/products/components/new-product-page/new-product-page'));
 const ProductDetailPage = React.lazy(() => import('@features/products/components/product-detail/product-detail'))
 
 const Router: React.FC = () => {
