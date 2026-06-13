@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useDetails } from "./use-details";
 import { Layout } from "@core/components/layout/layout";
 import { getMenuOptions } from "@core/components/menu/menu-options";
-import { DeleteModal } from "./componentes/delete-modal";
+import { ConfirmModal } from "@core/components/confirmModal/confirm-modal";
 import { deleteProduct } from "@features/products/services/products-repo";
 import { useState } from "react";
 import "./product-detail.css"
@@ -11,7 +11,7 @@ import "./product-detail.css"
 
 
 const ProductDetailPage: React.FC = () => {
-    const [deleteModal, setDeleteModal] = useState(false);
+    const [showModal, setShowModal] = useState(false);
     const { id } =  useParams();
     const navigate = useNavigate();
     
@@ -25,7 +25,7 @@ const ProductDetailPage: React.FC = () => {
     }
 
     const handleStartDelete = () => {
-        setDeleteModal(true)
+        setShowModal(true)
     }
 
     const handleDelete = async () => { 
@@ -50,7 +50,7 @@ const ProductDetailPage: React.FC = () => {
                     <p className="tags">{product.tags? product.tags.map(tag => `#${tag}`).join(' '): ''}</p>
                 </div>
                 <button onClick={handleStartDelete}>Borrar Producto</button>
-                {deleteModal && <DeleteModal onDelete={handleDelete} onClose={() => {setDeleteModal(false)}}/>}
+                {showModal && <ConfirmModal onConfirm={handleDelete} onClose={() => {setShowModal(false)}}/>}
             </div>
         </Layout>
     )
