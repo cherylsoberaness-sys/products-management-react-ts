@@ -1,0 +1,17 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.delete-modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 2rem;
+}

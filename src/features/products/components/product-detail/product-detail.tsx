@@ -1,14 +1,19 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useDetails } from "./use-details";
 import { Layout } from "@core/components/layout/layout";
 import { getMenuOptions } from "@core/components/menu/menu-options";
+import { DeleteModal } from "./componentes/delete-modal";
+import { deleteProduct } from "@features/products/services/products-repo";
+import { useState } from "react";
 import "./product-detail.css"
 
 
 
 
 const ProductDetailPage: React.FC = () => {
+    const [deleteModal, setDeleteModal] = useState(false);
     const { id } =  useParams();
+    const navigate = useNavigate();
     
     const { product, notification } = useDetails(id!);
 
@@ -17,6 +22,16 @@ const ProductDetailPage: React.FC = () => {
     }
     if (!product) {
         return <p>Cargando...</p>;
+    }
+
+    const handleStartDelete = () => {
+        setDeleteModal(true)
+    }
+
+    const handleDelete = async () => { 
+
+        await deleteProduct(id!);
+        navigate('/products');
     }
     
     return (
@@ -34,7 +49,8 @@ const ProductDetailPage: React.FC = () => {
                     <p className="description">{product.description}.</p>
                     <p className="tags">{product.tags? product.tags.map(tag => `#${tag}`).join(' '): ''}</p>
                 </div>
-
+                <button onClick={handleStartDelete}>Borrar Producto</button>
+                {deleteModal && <DeleteModal onDelete={handleDelete} onClose={() => {setDeleteModal(false)}}/>}
             </div>
         </Layout>
     )

@@ -89,3 +89,19 @@ export const upload = async (image: File | null) => {
     
     return imagePath
 }
+
+export const deleteProduct = async (id: string) => {
+    const token = getToken();
+    const url = `http://localhost:8000/api/products/${id}`
+    const response = await fetch(url, {
+        method: 'Delete',
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    })
+
+    const messsage = await response.json();
+    if(!response.ok) {
+        return messsage.messsage
+    }
+}

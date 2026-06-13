@@ -24,13 +24,13 @@ export const ProductForm: React.FC = () => {
 
     const handleSubmit = async (event: React.SubmitEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const imagePath = await upload(image);
+        const imagePath = image ? await upload(image): null;
 
         
 
         const newProduct = {
             ...product,
-            image: imagePath.path,
+            image: imagePath?.path ?? '',
             tags: tagsInput.split(',').map(tag => tag.trim())
         }
         
