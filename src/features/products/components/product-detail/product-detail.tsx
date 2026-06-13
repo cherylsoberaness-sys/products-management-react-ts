@@ -44,7 +44,7 @@ const ProductDetailPage: React.FC = () => {
                 <div className="detail-content">
                     <h3>{product.name}</h3>
                     <h2 className="price">${product.price}</h2>
-                    <p className="promotion">Oferta: {product.isOnSale? 'si' : 'no'}</p>
+                    <p className="promotion">Oferta: {product.isOnSale? 'Si' : 'No'}</p>
                     <p className="description">{product.description}.</p>
                     <p className="tags">{product.tags? product.tags.map(tag => `#${tag}`).join(' '): ''}</p>
                 </div>
