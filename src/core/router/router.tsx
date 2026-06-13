@@ -2,9 +2,9 @@ import React from "react";
 import { Route, Routes, Navigate} from 'react-router-dom';
 import ProtectedRoute from "./protected-route";
 
-const ProductsPage = React.lazy(() => import('@features/products/products-page'));
+const ProductsPage = React.lazy(() => import('@features/products/pages/ProductsPage/products-page'));
 const LoginPage = React.lazy(() => import('@features/auth/login-page'));
-const NewProductPage = React.lazy(() => import('@features/products/components/new-product-page/new-product-page'));
+const NewProductPage = React.lazy(() => import('@features/products/pages/NewProductPage/new-product-page'));
 const ProductDetailPage = React.lazy(() => import('@features/products/components/product-detail/product-detail'))
 const NotFoundPage = React.lazy(() => import('@features/not-found/not-found-page'))
 

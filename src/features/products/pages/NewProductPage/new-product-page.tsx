@@ -1,7 +1,6 @@
-import { Layout } from "../../../../core/components/layout/layout";
+import { Layout } from "@core/components/layout/layout";
 import { getMenuOptions } from "@core/components/menu/menu-options"
-import { ProductForm } from "./components/product-form";
-
+import { ProductForm } from "@features/products/components/product-form/product-form";
 
 
 const NewProductPage: React.FC = () => {

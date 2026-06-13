@@ -1,11 +1,11 @@
 import type { ProductFilter } from "@core/types/products-filter";
-import { Layout } from "../../core/components/layout/layout";
-import { getMenuOptions } from "../../core/components/menu/menu-options";
-import { ProductsList } from "./components/product-list/product-list";
-import { useProducts } from "./components/product-list/use-products";
-import { ProductsFilter } from "./components/filters/product-filters";
+import { Layout } from "@core/components/layout/layout";
+import { getMenuOptions } from "@core/components/menu/menu-options";
+import { ProductsList } from "@features/products/components/product-list/product-list";
+import { useProducts } from "@features/products/components/product-list/use-products";
+import { ProductsFilter } from "@features/products/components/filters/product-filters";
 import { Navigate, useSearchParams } from "react-router-dom";
-import type { Product } from "./entities/Product";
+import type { Product } from "@features/products/entities/Product";
 import { normalize } from "@core/helpers/utils";
 
 
