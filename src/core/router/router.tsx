@@ -44,7 +44,13 @@ const Router: React.FC = () => {
                     </ProtectedRoute>
                 }
             />
-            <Route path="/products/:id" element={<ProductDetailPage />} />
+            <Route path="/products/:id" element={
+                    <ProtectedRoute>
+                        <React.Suspense fallback={<p>Loading...</p>}>
+                            <ProductDetailPage />
+                        </React.Suspense>
+                    </ProtectedRoute>} 
+            />
             <Route path="/404" element={<NotFoundPage />}/>
             <Route path="*" element={<NotFoundPage />}/>
         </Routes>
