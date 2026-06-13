@@ -73,6 +73,16 @@
       "userId": 1,
       "updatedAt": "2026-06-08T21:52:34.833Z",
       "id": 5
+    },
+    {
+      "name":"Boleto para las aguas termales en las montañas Etwas",
+      "price":1,"description":"Te lo regalamos ya que probablemente ya están secas",
+      "image":"",
+      "isOnSale":true,
+      "tags":["boleto"],
+      "userId":1,
+      "updatedAt":"2026-06-13T21:39:01.046Z",
+      "id":7
     }
   ]
 }

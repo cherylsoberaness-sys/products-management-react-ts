@@ -14,7 +14,7 @@ export const ProductItem: React.FC<Props> = ({product}) => {
                 {product.image ? (
                 <img src={product.image} alt={product.name} />
                 ) : (
-                <img alt={product.name} />
+                <span>Sin imagen</span>
                 )}
             </div>
             <div className="product-content">

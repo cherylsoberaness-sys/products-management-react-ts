@@ -8,8 +8,6 @@ import { useState } from "react";
 import "./product-detail.css"
 
 
-
-
 const ProductDetailPage: React.FC = () => {
     const [showModal, setShowModal] = useState(false);
     const { id } =  useParams();
@@ -39,8 +37,9 @@ const ProductDetailPage: React.FC = () => {
             <div className="product-detail">
                 <div className="detail-img-container">
                     {product.image ? 
-                        (<img src={product.image} />) : 
-                        (<img alt={product.name} />)}
+                        (<img src={product.image} alt={product.name} />) :
+                        
+                        (<span>Sin imagen</span>)}
                 </div>
                 <div className="detail-content">
                     <h3>{product.name}</h3>
