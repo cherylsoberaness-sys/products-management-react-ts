@@ -1,6 +1,6 @@
 import { removeToken } from "@core/helpers/storage"
 import { useNavigate } from "react-router-dom";
-import { ConfirmModal } from "../confirmModal/confirm-modal";
+import { ConfirmModal } from "@core/components/confirmModal/confirm-modal";
 import { useState } from "react";
 
 const LogoutButton : React.FC = () => {

@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useDetails } from "./use-details";
 import { Layout } from "@core/components/layout/layout";
 import { getMenuOptions } from "@core/components/menu/menu-options";
@@ -15,10 +15,10 @@ const ProductDetailPage: React.FC = () => {
     const { id } =  useParams();
     const navigate = useNavigate();
     
-    const { product, notification } = useDetails(id!);
+    const { product, notFound } = useDetails(id!);
 
-    if (notification) {
-        return <p>{notification}</p>
+    if (notFound) {
+        return <Navigate to="/404" replace />;
     }
     if (!product) {
         return <p>Cargando...</p>;

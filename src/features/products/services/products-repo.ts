@@ -35,13 +35,12 @@ export const getProduct = async (productId: string): Promise<Product> => {
         }
     })
 
-    if(!response.ok) {
-        throw new Error('No fue posible cargar el producto');
+    if (!response.ok) {
+        throw new Error('Producto no encontrado');
     }
 
-    const product = await response.json();
+    return await response.json();
 
-    return product
 }
 
 export const createProduct = async (product: ProductCreateDTO) => {
@@ -57,10 +56,9 @@ export const createProduct = async (product: ProductCreateDTO) => {
         body: JSON.stringify(product)
     })
 
-    if(!response.ok){
-        throw new Error('No fue posible cargar el producto');
+    if(!response.ok) {
+        throw new Error('Error al crear producto')
     }
-
     return await response.json();
 
 }
@@ -85,9 +83,9 @@ export const upload = async (image: File | null) => {
         throw new Error('No fue posible cargar la imagen')
     }
 
-    const imagePath = await response.json();
+    return await response.json();
     
-    return imagePath
+    
 }
 
 export const deleteProduct = async (id: string) => {
@@ -100,8 +98,9 @@ export const deleteProduct = async (id: string) => {
         }
     })
 
-    const messsage = await response.json();
     if(!response.ok) {
-        return messsage.messsage
+        throw new Error('Error al borrar producto')
     }
+
+    return await response.json();
 }

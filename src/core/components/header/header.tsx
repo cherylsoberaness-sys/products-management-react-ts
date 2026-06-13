@@ -11,7 +11,7 @@ export const Header: React.FC<Props> = ({title, subTitle, children}) => {
         <header>
             {children}
             <h1>{title}</h1>
-            <p className="subtitle">{subTitle}</p>
+            <h2 className="subtitle">{subTitle}</h2>
         </header>
     )
 }

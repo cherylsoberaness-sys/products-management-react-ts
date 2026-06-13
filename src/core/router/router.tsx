@@ -6,6 +6,7 @@ const ProductsPage = React.lazy(() => import('@features/products/products-page')
 const LoginPage = React.lazy(() => import('@features/auth/login-page'));
 const NewProductPage = React.lazy(() => import('@features/products/components/new-product-page/new-product-page'));
 const ProductDetailPage = React.lazy(() => import('@features/products/components/product-detail/product-detail'))
+const NotFoundPage = React.lazy(() => import('@features/not-found/not-found-page'))
 
 const Router: React.FC = () => {
     return  (
@@ -44,7 +45,8 @@ const Router: React.FC = () => {
                 }
             />
             <Route path="/products/:id" element={<ProductDetailPage />} />
-            <Route path="*" element={<h1>404 Not Found</h1>}/>
+            <Route path="/404" element={<NotFoundPage />}/>
+            <Route path="*" element={<NotFoundPage />}/>
         </Routes>
     )
 

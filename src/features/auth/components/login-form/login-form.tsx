@@ -1,6 +1,6 @@
 import { useState } from "react"
-import type { LoginCredentials } from "../entities/login-credentials";
-import { loginUser } from "../services/login-repo";
+import type { LoginCredentials } from "@features/auth/entities/login-credentials";
+import { loginUser } from "@features/auth/services/login-repo";
 import { saveToken } from "@core/helpers/storage";
 import { useNavigate } from "react-router-dom";
 

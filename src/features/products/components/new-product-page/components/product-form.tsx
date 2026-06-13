@@ -19,13 +19,21 @@ export const ProductForm: React.FC = () => {
     const [ product, setProduct ] = useState(initialProduct);
     const [ image, setImage ] = useState<File | null>(null);
     const [tagsInput, setTagsInput] = useState<string>('');
+    const [error, setError] = useState<string | null>(null)
     const navigate = useNavigate();
 
 
     const handleSubmit = async (event: React.SubmitEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const imagePath = image ? await upload(image): null;
-
+        setError(null);
+        let imagePath;
+        try {
+            imagePath = image ? await upload(image): null;
+        } catch (error){
+            const errorMessage = error instanceof Error? error.message : null;
+            setError(errorMessage)
+            return;
+        }
         
 
         const newProduct = {
@@ -34,8 +42,13 @@ export const ProductForm: React.FC = () => {
             tags: tagsInput.split(',').map(tag => tag.trim())
         }
         
-        const productCreated = await createProduct(newProduct);
-        navigate(`/products/${productCreated.id}`);
+        try {
+            const productCreated = await createProduct(newProduct);
+            navigate(`/products/${productCreated.id}`);
+        } catch(error) {
+            const errorMessage = error instanceof Error? error.message : 'Ha ocurrido un error';
+            setError(errorMessage)
+        }
 
     }
 
@@ -105,6 +118,8 @@ export const ProductForm: React.FC = () => {
             </label>
 
             <button type="submit" disabled={!canSubmit}>Submit</button>
+            {error && <p>{error}</p>}
         </form>
+
     )
 }

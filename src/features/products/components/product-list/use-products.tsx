@@ -8,7 +8,8 @@ import { getProducts } from '@features/products/services/products-repo'
 export const useProducts = () => {
     const [products, setProducts] = useState<Product[]>([]);
     const [notification, setNotification] = useState<string | null>(null);
-    
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         const loadProducts = async (): Promise<void> => {
             
@@ -18,6 +19,8 @@ export const useProducts = () => {
             } catch (error) {
                 const notification = error instanceof Error ? error.message : 'No fue posible cargar los productos' 
                 setNotification(notification);
+            } finally {
+                setLoading(false)
             }
 
         }
@@ -26,6 +29,7 @@ export const useProducts = () => {
 
     return {
         products,
-        notification
+        notification,
+        loading
     }
 }

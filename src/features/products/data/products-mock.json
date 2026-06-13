@@ -1,38 +1,78 @@
-[
-  {
-    "id": 1,
-    "name": "Laptop Gamer Pro",
-    "price": 24999,
-    "description": "Laptop de alto rendimiento con procesador Ryzen y GPU dedicada.",
-    "image": "https://picsum.photos/id/1/300/200",
-    "isOnSale": true,
-    "tags": ["gaming", "laptop", "electronics"]
-  },
-  {
-    "id": 2,
-    "name": "Monitor Ultrawide 34\"",
-    "price": 8999,
-    "description": "Monitor panorámico ideal para productividad y multitarea.",
-    "image": "https://picsum.photos/id/20/300/200",
-    "isOnSale": false,
-    "tags": ["monitor", "office", "electronics"]
-  },
-  {
-    "id": 3,
-    "name": "Teclado Mecánico RGB",
-    "price": 1499,
-    "description": "Teclado mecánico con iluminación RGB y switches táctiles.",
-    "image": "https://picsum.photos/id/48/300/200",
-    "isOnSale": true,
-    "tags": ["keyboard", "gaming", "accessories"]
-  },
-  {
-    "id": 4,
-    "name": "Mouse Inalámbrico Ergo",
-    "price": 799,
-    "description": "Mouse ergonómico inalámbrico para largas jornadas de trabajo.",
-    "image": "https://picsum.photos/id/96/300/200",
-    "isOnSale": false,
-    "tags": ["mouse", "office", "accessories"]
-  }
-]
+{
+  "products": [
+    {
+      "name": "Báculo especial",
+      "price": 24999,
+      "description": "Baculo de rango desconocido, se cree que solo se puede usar por magos poderosos",
+      "image": "http://localhost:8000//file-1780953110187.png",
+      "isOnSale": true,
+      "tags": [
+        "magic",
+        "special"
+      ],
+      "userId": 1,
+      "updatedAt": "2026-06-08T21:16:10.035Z",
+      "id": 1
+    },
+    {
+      "name": "Grimorio: Hechizo de inmortalidad",
+      "price": 100000,
+      "description": "Contiene secretos de salud e inmortalidad: requiere descifrar",
+      "image": "http://localhost:8000//file-1780954062711.png",
+      "isOnSale": false,
+      "tags": [
+        "magic",
+        "inmortality",
+        "Diosa",
+        "salud"
+      ],
+      "userId": 1,
+      "updatedAt": "2026-06-08T21:33:57.131Z",
+      "id": 2
+    },
+    {
+      "name": "Baúl: Contenido Sorpresa",
+      "price": 1000,
+      "description": "Encontrado en el calabozo de las tierras del norte, pudiera contener algun monstruo mímico (No se puede devolver)",
+      "image": "http://localhost:8000//file-1780954514125.png",
+      "isOnSale": true,
+      "tags": [
+        "baul",
+        "surprise",
+        "monsterOrTreasure"
+      ],
+      "userId": 1,
+      "updatedAt": "2026-06-08T21:40:09.845Z",
+      "id": 3
+    },
+    {
+      "name": "Poción de Vida",
+      "price": 500,
+      "description": "Al beberla recuperas salud completamente",
+      "image": "http://localhost:8000//file-1780954990209.png",
+      "isOnSale": false,
+      "tags": [
+        "potion",
+        "health"
+      ],
+      "userId": 1,
+      "updatedAt": "2026-06-08T21:46:31.649Z",
+      "id": 4
+    },
+    {
+      "name": "Grimorio: Flores del campo",
+      "price": 3000,
+      "description": "Contiene el hechizo para producir flores de campo, Autora: Flammé",
+      "image": "http://localhost:8000//file-1780955283856.png",
+      "isOnSale": true,
+      "tags": [
+        "grimoire",
+        "flowers",
+        "spells"
+      ],
+      "userId": 1,
+      "updatedAt": "2026-06-08T21:52:34.833Z",
+      "id": 5
+    }
+  ]
+}
