@@ -1,6 +1,8 @@
 # Frontend CRUD aplicación construida con React, TypeScript y APIs REST.
 ![Vista de la app](./assets/project-images/project.png)
 
+Proyecto CRUD inspirado en la serie de Frieren para la administración y venta de los artefactos y grimorios obtenidos en sus viajes y aventuras junto con sus compañeros.
+
 ## Acciones que permite realizar
 
 - Publicar producto
