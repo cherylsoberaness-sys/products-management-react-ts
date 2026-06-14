@@ -66,6 +66,7 @@ body {
   margin: 0;
   background: #070d1f;
   color: #9b907a;
+  align-items: center;
 }
 
 h1,
@@ -103,4 +104,30 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--bg);
+}
+
+.nav-header {
+  color: #9b907a;
+  text-decoration: none;
+  padding: 5px;
+  transition: color 0.2s ease;
+}
+
+.nav-header:hover {
+  color: #606264;
+}
+
+button {
+  padding: 0.1rem .80rem;
+  border-radius: 4px;
+  background-color: #1f2e52;
+  color: #8b8779;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+button:focus-visible,
+button:hover{
+    opacity: 0.85;
+    border: 2px solid rgb(147, 128, 21);
 }

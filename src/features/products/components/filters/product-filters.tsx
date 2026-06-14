@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { type ProductFilter } from "@core/types/products-filter";
 import { useSearchParams } from "react-router-dom";
-
+import "./product-filter.css"
 const initialFilter: ProductFilter = {
     name: '',
     isOnSale: false 
@@ -36,16 +36,16 @@ export const ProductsFilter: React.FC = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
+            <form className="filter" onSubmit={handleSubmit}>
                 <label>
-                    <input type="text" name="name" value={filter.name} onChange={handleChange}></input>
                     Nombre:
+                    <input type="text" name="name" value={filter.name} onChange={handleChange}></input>
                 </label>
                 <label>
-                    <input type="checkbox" name="isOnSale" checked={filter.isOnSale} onChange={handleChange}></input>
                     Promocion:
+                    <input type="checkbox" name="isOnSale" checked={filter.isOnSale} onChange={handleChange}></input>
                 </label>
-                <button type="submit">Buscar</button>
+                <button className="Search" type="submit">Buscar</button>
             </form>
         </>
     )

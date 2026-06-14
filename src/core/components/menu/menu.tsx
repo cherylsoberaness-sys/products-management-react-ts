@@ -14,7 +14,7 @@ export const Menu: React.FC<Props> = ({ options }) => {
     return  (
         <nav>
             {options?.map((option) => (
-                <NavLink className="navlink" key={option.path} to={option.path!}>
+                <NavLink className="nav-header" key={option.path} to={option.path!}>
                     {option.label}
                 </NavLink>
             ))}

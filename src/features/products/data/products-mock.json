@@ -1,78 +1,94 @@
 {
   "products": [
     {
+      "name": "Grimorio: Flores del Campo",
+      "price": 3000,
+      "description": "El hechizo favorito de la famosa maga Flamme",
+      "image": "http://localhost:8000//file-1781466708922.png",
+      "isOnSale": true,
+      "tags": [
+        "grimorio",
+        "flores",
+        "spells"
+      ],
+      "userId": 1,
+      "updatedAt": "2026-06-14T19:51:48.929Z",
+      "id": 1
+    },
+    {
+      "name": "Poción de vida",
+      "price": 500,
+      "description": "Al beberla recuperas tu salud completamente.",
+      "image": "http://localhost:8000//file-1781466832464.png",
+      "isOnSale": false,
+      "tags": [
+        "pocion",
+        "salud"
+      ],
+      "userId": 1,
+      "updatedAt": "2026-06-14T19:53:52.491Z",
+      "id": 2
+    },
+    {
+      "name": "Grimorio Secretos de la Diosa",
+      "price": 100000,
+      "description": "Contiene una recapitulación de todos los hechizos de La Diosa conocidos y encontrados en distintos grimorios",
+      "image": "http://localhost:8000//file-1781466950916.png",
+      "isOnSale": false,
+      "tags": [
+        "grimorio",
+        "LaDiosa",
+        "magia",
+        "secretos"
+      ],
+      "userId": 1,
+      "updatedAt": "2026-06-14T19:55:50.921Z",
+      "id": 3
+    },
+    {
       "name": "Báculo especial",
-      "price": 24999,
-      "description": "Baculo de rango desconocido, se cree que solo se puede usar por magos poderosos",
-      "image": "http://localhost:8000//file-1780953110187.png",
+      "price": 2000000,
+      "description": "Báculo de rango desconocido, se cree que solo se puede usar por magos poderosos.",
+      "image": "http://localhost:8000//file-1781467088375.png",
       "isOnSale": true,
       "tags": [
         "magic",
         "special"
       ],
       "userId": 1,
-      "updatedAt": "2026-06-08T21:16:10.035Z",
-      "id": 1
+      "updatedAt": "2026-06-14T19:58:08.378Z",
+      "id": 4
     },
     {
       "name": "Grimorio: Hechizo de inmortalidad",
       "price": 100000,
       "description": "Contiene secretos de salud e inmortalidad: requiere descifrar",
-      "image": "http://localhost:8000//file-1780954062711.png",
+      "image": "http://localhost:8000//file-1781467237475.png",
       "isOnSale": false,
       "tags": [
-        "magic",
-        "inmortality",
+        "magia",
+        "inmortalidad",
         "Diosa",
         "salud"
       ],
       "userId": 1,
-      "updatedAt": "2026-06-08T21:33:57.131Z",
-      "id": 2
+      "updatedAt": "2026-06-14T20:00:37.481Z",
+      "id": 5
     },
     {
       "name": "Baúl: Contenido Sorpresa",
       "price": 1000,
       "description": "Encontrado en el calabozo de las tierras del norte, pudiera contener algun monstruo mímico (No se puede devolver)",
-      "image": "http://localhost:8000//file-1780954514125.png",
-      "isOnSale": true,
-      "tags": [
-        "baul",
-        "surprise",
-        "monsterOrTreasure"
-      ],
-      "userId": 1,
-      "updatedAt": "2026-06-08T21:40:09.845Z",
-      "id": 3
-    },
-    {
-      "name": "Poción de Vida",
-      "price": 500,
-      "description": "Al beberla recuperas salud completamente",
-      "image": "http://localhost:8000//file-1780954990209.png",
+      "image": "http://localhost:8000//file-1781467411080.png",
       "isOnSale": false,
       "tags": [
-        "potion",
-        "health"
+        "baul",
+        "sorpresa",
+        "mounstruoOtesoro"
       ],
       "userId": 1,
-      "updatedAt": "2026-06-08T21:46:31.649Z",
-      "id": 4
-    },
-    {
-      "name": "Grimorio: Flores del campo",
-      "price": 3000,
-      "description": "Contiene el hechizo para producir flores de campo, Autora: Flammé",
-      "image": "http://localhost:8000//file-1780955283856.png",
-      "isOnSale": true,
-      "tags": [
-        "grimoire",
-        "flowers",
-        "spells"
-      ],
-      "userId": 1,
-      "updatedAt": "2026-06-08T21:52:34.833Z",
-      "id": 5
+      "updatedAt": "2026-06-14T20:03:31.085Z",
+      "id": 6
     },
     {
       "name":"Boleto para las aguas termales en las montañas Etwas",

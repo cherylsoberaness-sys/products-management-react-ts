@@ -11,7 +11,12 @@
 
 
 .confirm-modal {
-    background: white;
+    background: rgb(19, 27, 72);
+    color: white;
     padding: 2rem;
     border-radius: 2rem;
+}
+
+h2 {
+   color: #d0ab60;
 }

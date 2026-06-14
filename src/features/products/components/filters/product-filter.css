@@ -1,0 +1,27 @@
+.filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.filter label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.Search {
+    padding: 0.1rem .80rem;
+    border-radius: 4px;
+    background-color: #1f2e52;
+    color: #8b8779;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.Search:focus-visible,
+.Search:hover{
+    opacity: 0.85;
+    border: 2px solid rgb(147, 128, 21);
+}
+
