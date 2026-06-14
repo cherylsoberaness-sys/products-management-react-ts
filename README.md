@@ -1,5 +1,7 @@
 # Frontend CRUD aplicación construida con React, TypeScript, React Router y APIs REST.
 
+## Acciones que permite realizar
+
 - Publicar producto
 - Eliminar producto, antes de eliminar pide al usuario confirmar
 - Login
@@ -34,22 +36,47 @@ Aprendizajes de frontend junto con React y tipado utilizando TypeScript:
 ## Instalación
 
 1. Clonar el repositorio
-
 ```
 git clone <url-del-repo>
 cd arcane-library-management
+```
 
 2. Instalar dependencias
-
 ```
 npm install
+```
 
-2. Iniciar la aplicación
-
+3. Iniciar la aplicación
 ```
 npm run dev
+```
 
----
+## Complementos
+
+El proyecto contiene en la carpeta de assets, imágenes para la creación de tus productos con la temática de magia/videojuego.
+
+## Requisitos
+
+Este proyecto consume una API externa con un backend que utiliza un archivo JSON como base de datos.
+
+https://github.com/alce65/sparrest.js
+
+Ejecución del API:
+
+1. Instalar dependencias:
+```
+npm install
+```
+
+2. Ejecutar la aplicación
+```
+npm start
+```
+
+
+
+
+
 
 
 
