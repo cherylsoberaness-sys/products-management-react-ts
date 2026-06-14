@@ -1,4 +1,4 @@
-# Frontend CRUD applicación construida con React, TypeScript, React Router y APIs REST.
+# Frontend CRUD aplicación construida con React, TypeScript, React Router y APIs REST.
 
 - Publicar producto
 - Eliminar producto, antes de eliminar pide al usuario confirmar
