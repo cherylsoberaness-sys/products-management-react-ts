@@ -41,13 +41,11 @@ const ProductDetailPage: React.FC = () => {
                         
                         (<span>Sin imagen</span>)}
                 </div>
-                <div className="detail-content">
-                    <h3>{product.name}</h3>
-                    <h2 className="price">${product.price}</h2>
-                    <p className="promotion">Oferta: {product.isOnSale? 'Si' : 'No'}</p>
-                    <p className="description">{product.description}.</p>
-                    <p className="tags">{product.tags? product.tags.map(tag => `#${tag}`).join(' '): ''}</p>
-                </div>
+                <h3>{product.name}</h3>
+                <h2>${product.price}</h2>
+                <p className="promotion">Oferta: {product.isOnSale? 'Si' : 'No'}</p>
+                <p className="description">{product.description}.</p>
+                <p className="tags">{product.tags? product.tags.map(tag => `#${tag}`).join(' '): ''}</p>   
                 <button onClick={handleStartDelete}>Borrar Producto</button>
                 {showModal && <ConfirmModal onConfirm={handleDelete} onClose={() => {setShowModal(false)}}/>}
             </div>

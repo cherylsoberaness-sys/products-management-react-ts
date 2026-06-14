@@ -18,10 +18,10 @@ export const ProductItem: React.FC<Props> = ({product}) => {
                 )}
             </div>
             <div className="product-content">
-                <h3>{product.name}</h3>
-                <p>${product.price}</p>
+                <h6>{product.name}</h6>
+                <h5>${product.price}</h5>
                 <p>Oferta: {product.isOnSale? 'Si' : 'No'}</p>
-                <p>{product.tags? product.tags.map(tag => `#${tag}`).join('') : ''}</p>
+                <p>{product.tags? product.tags.map(tag => `#${tag}`).join(' ') : ''}</p>
             </div>            
         </li>
     )

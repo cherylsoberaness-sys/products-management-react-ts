@@ -7,6 +7,11 @@
     height: 650px;
     padding: 40px;
     margin: 0 auto;
+    color: #9b907a;
+}
+
+.product-detail h2 {
+    color: #d0ab60;
 }
 
 
@@ -23,14 +28,9 @@
     object-fit: contain;
 }
 
-.price,
-.promotion,
-.tags {
-    color: black;
-}
+
 
 
 .detail-content {
     height: 50%;
-    color: rgb(145, 118, 170);
 }
