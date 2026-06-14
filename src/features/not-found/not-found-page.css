@@ -1,0 +1,17 @@
+
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-found--image {
+    width: 400px;
+    height: 500px;
+
+    background-image: url('../../../public/frieren_404.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
