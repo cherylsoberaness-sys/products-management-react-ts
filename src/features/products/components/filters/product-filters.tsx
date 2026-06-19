@@ -38,14 +38,14 @@ export const ProductsFilter: React.FC = () => {
         <>
             <form className="filter" onSubmit={handleSubmit}>
                 <label>
-                    Nombre:
+                    Name:
                     <input type="text" name="name" value={filter.name} onChange={handleChange}></input>
                 </label>
                 <label>
-                    Promocion:
+                    On Sale:
                     <input type="checkbox" name="isOnSale" checked={filter.isOnSale} onChange={handleChange}></input>
                 </label>
-                <button className="Search" type="submit">Buscar</button>
+                <button className="Search" type="submit">Search</button>
             </form>
         </>
     )
